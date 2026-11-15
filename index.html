@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felicity Gonzaga | Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* Large icons for all skills */
+        .skill-icon {
+            display: block;
+            width: 140px;
+            height: 140px;
+            max-width: 90%;
+            margin: auto;
+            color: var(--cream, #f5ebdd);
+        }
+
+        .card-image,
+        .creative-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Equal-sized creative skill boxes */
+        .creative-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            align-items: stretch;
+            gap: 1.25rem;
+        }
+
+        .creative-card {
+            grid-column: auto !important;
+            grid-row: auto !important;
+            width: 100%;
+            height: 100%;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .creative-image {
+            width: 100%;
+            height: 230px;
+            min-height: 230px;
+            flex: 0 0 230px;
+            overflow: hidden;
+        }
+
+        .creative-label {
+            min-height: 56px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Skill percentage bars */
+        .skill-proficiencies {
+            margin-top: 1.5rem;
+            display: grid;
+            gap: 1rem;
+        }
+
+        .proficiency-item {
+            display: grid;
+            gap: 0.45rem;
+        }
+
+        .proficiency-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.72rem;
+            letter-spacing: 0.04em;
+            color: var(--cream, #f5ebdd);
+        }
+
+        .proficiency-track {
+            width: 100%;
+            height: 5px;
+            overflow: hidden;
+            background: rgba(245, 235, 221, 0.16);
+        }
+
+        .proficiency-fill {
+            display: block;
+            height: 100%;
+            width: var(--level);
+            background: var(--cream, #f5ebdd);
+        }
+
+        @media (max-width: 800px) {
+            .creative-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 520px) {
+            .creative-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <div class="nav-inner">
+            <a href="#home" class="logo">FG<span>.</span></a>
+
+            <nav id="navMenu">
+                <a href="#about">ABOUT</a>
+                <a href="#skills">SKILLS</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
+
+            <button class="menu-button" id="menuButton" aria-label="Open menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <div class="hero-background-word">Portfolio</div>
+            <div class="hero-number">01</div>
+
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="small-label">INFORMATION TECHNOLOGY</p>
+
+                    <h1>
+                        Felicity
+                        <br>
+                        <span>Gonzaga</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        IT student, developer, designer, and artist
+                        creating digital experiences through technology
+                        and creativity.
+                    </p>
+
+                    <div class="hero-links">
+                        <a href="#skills" class="editorial-button">
+                            EXPLORE <span>↗</span>
+                        </a>
+                        <a href="#contact" class="text-link">GET IN TOUCH</a>
+                    </div>
+                </div>
+
+                <div class="hero-photo-area">
+                    <div class="photo-circle"></div>
+                    <div class="photo-line"></div>
+                    <div class="photo-number">2026</div>
+
+                    <img src="images/profile.png" alt="Felicity Gonzaga" class="hero-photo">
+
+                    <div class="photo-caption">
+                        <span>IT STUDENT</span>
+                        <span>CREATIVE</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-bottom">
+                <span>PYTHON</span>
+                <span>WEB</span>
+                <span>DATABASE</span>
+                <span>DESIGN</span>
+                <span class="scroll-text">SCROLL TO EXPLORE ↓</span>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="about section" id="about">
+            <div class="section-number">02</div>
+
+            <div class="section-title">
+                <p>ABOUT ME</p>
+                <h2>Who <em>I am.</em></h2>
+            </div>
+
+            <div class="about-layout">
+                <div class="about-image">
+                    <div class="image-label">FELICITY / 03A</div>
+                    <img src="images/profile.png" alt="Felicity Gonzaga">
+                </div>
+
+                <div class="about-text">
+                    <p class="large-text">
+                        I believe technology is more than just code.
+                    </p>
+
+                    <p>
+                        I am an Information Technology student
+                        interested in software development,
+                        web technologies, databases, and digital design.
+                    </p>
+
+                    <p>
+                        I enjoy creating systems that are functional
+                        and practical while also exploring creative work
+                        such as graphic design, T-shirt design,
+                        drawing, and music.
+                    </p>
+
+                    <div class="about-facts">
+                        <div>
+                            <strong>01</strong>
+                            <span>TECHNOLOGY</span>
+                        </div>
+                        <div>
+                            <strong>02</strong>
+                            <span>CREATIVITY</span>
+                        </div>
+                        <div>
+                            <strong>03</strong>
+                            <span>LEARNING</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECHNICAL SKILLS -->
+        <section class="skills section" id="skills">
+            <div class="section-number">03</div>
+
+            <div class="section-title">
+                <p>TECHNICAL SKILLS</p>
+                <h2>Built with <em>technology.</em></h2>
+            </div>
+
+            <div class="skills-intro">
+                <p>
+                    A selection of the technical skills I have
+                    developed throughout my Information Technology
+                    journey.
+                </p>
+            </div>
+
+            <div class="it-skills-grid">
+
+                <!-- PYTHON -->
+                <article class="it-card python-card">
+                    <div class="card-number">01</div>
+                    <div class="card-symbol">PY</div>
+
+                    <div class="card-image">
+                        <svg class="skill-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Python icon">
+                            <path d="M32 7C19 7 19 13 19 20v7h18v5H13C5 32 5 39 5 45s4 10 12 10h7v-9c0-7 5-12 12-12h10c5 0 8-4 8-9v-4C54 11 45 7 32 7Z"/>
+                            <circle cx="26" cy="16" r="2" fill="currentColor"/>
+                            <path d="M32 57c13 0 13-6 13-13v-7H27v-5h24c8 0 8-7 8-13s-4-10-12-10h-6v9c0 7-5 12-12 12H19c-5 0-8 4-8 9v4c0 10 8 14 21 14Z"/>
+                            <circle cx="38" cy="48" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+
+                    <div class="card-content">
+                        <p>PROGRAMMING</p>
+                        <h3>Python System Development</h3>
+                        <span>
+                            Developing functional systems and applications using Python.
+                        </span>
+
+                        <div class="skill-proficiencies">
+                            <div class="proficiency-item">
+                                <div class="proficiency-heading">
+                                    <span>PYTHON</span>
+                                    <strong>80%</strong>
+                                </div>
+                                <div class="proficiency-track">
+                                    <span class="proficiency-fill" style="--level: 80%"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- WEB DEVELOPMENT -->
+                <article class="it-card web-card">
+                    <div class="card-number">02</div>
+                    <div class="card-symbol">&lt;/&gt;</div>
+
+                    <div class="card-image">
+                        <svg class="skill-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Web development icon">
+                            <rect x="6" y="10" width="52" height="44" rx="3"/>
+                            <path d="M6 21h52M15 16h1m7 0h1m7 0h1"/>
+                            <path d="m25 30-7 6 7 6m14-12 7 6-7 6m-4-14-5 16"/>
+                        </svg>
+                    </div>
+
+                    <div class="card-content">
+                        <p>DEVELOPMENT</p>
+                        <h3>Web Development</h3>
+                        <span>
+                            Creating responsive websites using HTML, CSS, and JavaScript.
+                        </span>
+
+                        <div class="skill-proficiencies">
+                            <div class="proficiency-item">
+                                <div class="proficiency-heading">
+                                    <span>HTML</span>
+                                    <strong>85%</strong>
+                                </div>
+                                <div class="proficiency-track">
+                                    <span class="proficiency-fill" style="--level: 85%"></span>
+                                </div>
+                            </div>
+
+                            <div class="proficiency-item">
+                                <div class="proficiency-heading">
+                                    <span>CSS</span>
+                                    <strong>80%</strong>
+                                </div>
+                                <div class="proficiency-track">
+                                    <span class="proficiency-fill" style="--level: 80%"></span>
+                                </div>
+                            </div>
+
+                            <div class="proficiency-item">
+                                <div class="proficiency-heading">
+                                    <span>JAVASCRIPT</span>
+                                    <strong>65%</strong>
+                                </div>
+                                <div class="proficiency-track">
+                                    <span class="proficiency-fill" style="--level: 65%"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- DATABASE -->
+                <article class="it-card database-card">
+                    <div class="card-number">03</div>
+                    <div class="card-symbol">DB</div>
+
+                    <div class="card-image">
+                        <svg class="skill-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Database icon">
+                            <ellipse cx="32" cy="13" rx="21" ry="8"/>
+                            <path d="M11 13v38c0 5 9 9 21 9s21-4 21-9V13"/>
+                            <path d="M11 26c0 5 9 9 21 9s21-4 21-9M11 39c0 5 9 9 21 9s21-4 21-9"/>
+                        </svg>
+                    </div>
+
+                    <div class="card-content">
+                        <p>DATA</p>
+                        <h3>Database Management</h3>
+                        <span>
+                            Organizing, managing, and working with structured information.
+                        </span>
+
+                        <div class="skill-proficiencies">
+                            <div class="proficiency-item">
+                                <div class="proficiency-heading">
+                                    <span>POSTGRESQL</span>
+                                    <strong>75%</strong>
+                                </div>
+                                <div class="proficiency-track">
+                                    <span class="proficiency-fill" style="--level: 75%"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- CREATIVE SKILLS -->
+        <section class="creative section">
+            <div class="section-number">04</div>
+
+            <div class="section-title">
+                <p>CREATIVE SKILLS</p>
+                <h2>Beyond <em>technology.</em></h2>
+            </div>
+
+            <div class="creative-intro">
+                <p>
+                    Creativity is another way I communicate ideas,
+                    whether through visuals, design, illustration, or music.
+                </p>
+            </div>
+
+            <div class="creative-grid">
+
+                <!-- GRAPHIC DESIGN -->
+                <article class="creative-card">
+                    <div class="creative-image">
+                        <svg class="skill-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Graphic design icon">
+                            <path d="M32 7a25 25 0 1 0 0 50h5a7 7 0 0 0 0-14h-2a4 4 0 0 1 0-8h7A10 10 0 0 0 52 25C48 14 41 7 32 7Z"/>
+                            <circle cx="19" cy="27" r="3"/>
+                            <circle cx="28" cy="17" r="3"/>
+                            <circle cx="41" cy="20" r="3"/>
+                        </svg>
+                    </div>
+                    <div class="creative-label">01 / GRAPHIC DESIGN</div>
+                </article>
+
+                <!-- T-SHIRT DESIGN -->
+                <article class="creative-card">
+                    <div class="creative-image">
+                        <svg class="skill-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="T-shirt design icon">
+                            <path d="m22 12 10-5 10 5 14 8-7 12-8-4v29H23V28l-8 4-7-12z"/>
+                            <path d="M25 12c1 7 13 7 14 0"/>
+                        </svg>
+                    </div>
+                    <div class="creative-label">02 / T-SHIRT DESIGN</div>
+                </article>
+
+                <!-- DRAWING -->
+                <article class="creative-card">
+                    <div class="creative-image">
+                        <svg class="skill-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Drawing icon">
+                            <path d="m11 46-3 11 11-3 33-33-8-8z"/>
+                            <path d="m38 18 8 8M8 57l11-3-8-8M36 13 42 7l14 14-6 6"/>
+                        </svg>
+                    </div>
+                    <div class="creative-label">03 / DRAWING</div>
+                </article>
+
+                <!-- GUITAR -->
+                <article class="creative-card">
+                    <div class="creative-image">
+                        <svg class="skill-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Guitar icon">
+                            <path d="M39 8 55 24l-7 7-4-4-7 7a12 12 0 1 1-7-7l7-7-4-4z"/>
+                            <path d="m33 29 10 10M29 33l10 10M21 43l-5 5"/>
+                        </svg>
+                    </div>
+                    <div class="creative-label">04 / GUITAR</div>
+                </article>
+
+                <!-- PIANO -->
+                <article class="creative-card">
+                    <div class="creative-image">
+                        <svg class="skill-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Piano icon">
+                            <rect x="6" y="13" width="52" height="38" rx="2"/>
+                            <path d="M16 13v38m10-38v38m10-38v38m10-38v38M12 13v21h8V13m10 0v21h8V13m10 0v21h8V13"/>
+                        </svg>
+                    </div>
+                    <div class="creative-label">05 / PIANO</div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="contact section" id="contact">
+            <div class="contact-background">Contact</div>
+            <div class="section-number">05</div>
+
+            <div class="contact-content">
+                <p>LET'S CONNECT</p>
+
+                <h2>
+                    Have an idea?
+                    <br>
+                    <em>Let's create it.</em>
+                </h2>
+
+                <a href="mailto:felicityg205@gmail.com" class="contact-button">
+                    felicityg205@gmail.com
+                    <span>↗</span>
+                </a>
+            </div>
+
+            <div class="contact-footer">
+                <span>INFORMATION TECHNOLOGY</span>
+                <span>FELICITY GONZAGA</span>
+                <span>2026</span>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div>FG<span>.</span></div>
+        <p>© 2026 Felicity Gonzaga</p>
+        <a href="#home">BACK TO TOP ↑</a>
+    </footer>
+
+</body>
+</html>
